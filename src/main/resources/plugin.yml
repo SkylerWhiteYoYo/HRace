@@ -2,3 +2,22 @@ name: HRace
 version: '${project.version}'
 main: org.horserace.hrace.HRace
 api-version: '1.20'
+commands:
+  마권:
+    description: 현재 구매한 마권을 확인합니다.
+    usage: /마권
+  마권구매:
+    description: 새로운 마권을 구매합니다.
+    usage: /마권구매 <말번호> <구매할 돈 액수>
+    permission: horserace.purchase
+  마권당첨:
+    description: 당첨된 말번호의 마권을 산 플레이어에게 상금을 지급합니다.
+    usage: /마권당첨 <말번호>
+    permission: horserace.win
+
+
+
+permissions:
+  horserace.win:
+    description: 당첨된 마권에 대해 상금을 지급할 수 있는 권한
+    default: op
