@@ -9,17 +9,13 @@ import org.horserace.hrace.Ticket.HorseTicket;
 import org.horserace.hrace.Ticket.HorseTicketCommand;
 import org.horserace.hrace.Ticket.HorseTicketPurchaseCommand;
 import org.horserace.hrace.Ticket.HorseTicketWinCommand;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 
 public final class HRace extends JavaPlugin {
     private RaceBarriers raceBarriers;
-    public HRace(HRace plugin) {
-        // RaceBarriers 인스턴스를 생성합니다.
-        this.raceBarriers = new RaceBarriers(plugin);
-    }
+
     String worldName = "world";
     // 설정된 월드 이름을 가져오는 메서드입니다.
     public String getWorldName() {
@@ -87,6 +83,9 @@ public final class HRace extends JavaPlugin {
     }
     @Override
     public void onEnable() {
+        this.raceBarriers = new RaceBarriers(this);// 이게 있어야 울타리 불러오기 가능
+        getLogger().info("플러그인 활성화됨 (HRACE)");
+
         if (!initializeVault()) {
             getLogger().severe("Vault dependency not found! Disabling the plugin.");
             getServer().getPluginManager().disablePlugin(this);

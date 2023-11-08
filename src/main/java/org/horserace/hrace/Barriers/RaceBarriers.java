@@ -84,13 +84,6 @@ public class RaceBarriers {
     }
     //구역별 울타리에 구멍 생성
     public void createAllBarriers() {
-        // 구역 0은 구멍 없이 생성
-        int x0 = 165; // 예시 X 좌표
-        int y0 = 64; // 예시 높이 좌표
-        int startZ0 = -185; // 구역 0의 시작 Z 좌표
-        int length0 = 25; // 구역 0의 울타리 길이
-
-        createBarrierSection(x0, y0, startZ0, length0);
 
         // 나머지 구역에 대한 정보 (시작 Z 좌표와 구멍의 수)
         int[][] barrierInfo = {

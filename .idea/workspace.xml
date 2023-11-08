@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9565c87d-d3e1-4417-885a-30c10453397a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/Barriers/RaceBarriers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/Barriers/RaceBarriers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/HRace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/HRace.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="SOFT" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2Xsabi23a3wCWPURzaRwSKWjy68" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/lee/Desktop/내가만든 플귄/HRace",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "vcs.Git"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="HRace package" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9565c87d-d3e1-4417-885a-30c10453397a" name="Changes" comment="" />
+      <created>1699420316648</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699420316648</updated>
+    </task>
+    <task id="LOCAL-00001" summary="버전 업데이트 티켓 모두 업데이트 하였음.">
+      <option name="closed" value="true" />
+      <created>1699423550755</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699423550755</updated>
+    </task>
+    <task id="LOCAL-00002" summary="티켓 판매설명 추가( 시간과, 경마 진행중 나눠서 안내), 월드 이름 변경가능하게 변경하였음">
+      <option name="closed" value="true" />
+      <created>1699426045370</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699426045370</updated>
+    </task>
+    <task id="LOCAL-00003" summary="배리어 관련 메소드 전부 작성함 그리고 작은 추가사항 있었음">
+      <option name="closed" value="true" />
+      <created>1699427779330</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699427779330</updated>
+    </task>
+    <task id="LOCAL-00004" summary="/경마 시작 , /경마 종료 커맨드 추가 및 그에따른 메서드 작성">
+      <option name="closed" value="true" />
+      <created>1699429999188</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699429999188</updated>
+    </task>
+    <task id="LOCAL-00005" summary="오류로인해 일단 커밋하는중">
+      <option name="closed" value="true" />
+      <created>1699435911247</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699435911247</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="버전 업데이트 티켓 모두 업데이트 하였음." />
+    <MESSAGE value="티켓 판매설명 추가( 시간과, 경마 진행중 나눠서 안내), 월드 이름 변경가능하게 변경하였음" />
+    <MESSAGE value="배리어 관련 메소드 전부 작성함 그리고 월드이름을 메인클래스에서 변경가능하게 하였음" />
+    <MESSAGE value="/경마 시작 , /경마 종료 커맨드 추가 및 그에따른 메서드 작성" />
+    <MESSAGE value="오류로인해 일단 커밋하는중" />
+    <option name="LAST_COMMIT_MESSAGE" value="오류로인해 일단 커밋하는중" />
+  </component>
+</project>
