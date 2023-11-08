@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="HRace:jar">
-    <output-path>$USER_HOME$/Desktop/내가만든 플귄/HRace2</output-path>
-    <root id="archive" name="HRace.jar">
-      <element id="module-output" name="HRace" />
-    </root>
-  </artifact>
-</component>
