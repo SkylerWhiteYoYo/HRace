@@ -4,6 +4,7 @@ import net.milkbowl.vault.economy.Economy;
 import org.bukkit.World;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.horserace.hrace.Barriers.RaceBarriers;
 import org.horserace.hrace.Ticket.HorseTicket;
 import org.horserace.hrace.Ticket.HorseTicketCommand;
 import org.horserace.hrace.Ticket.HorseTicketPurchaseCommand;
@@ -14,6 +15,11 @@ import java.util.List;
 import java.util.UUID;
 
 public final class HRace extends JavaPlugin {
+    private RaceBarriers raceBarriers;
+    public HRace(HRace plugin) {
+        // RaceBarriers 인스턴스를 생성합니다.
+        this.raceBarriers = new RaceBarriers(plugin);
+    }
     String worldName = "world";
     // 설정된 월드 이름을 가져오는 메서드입니다.
     public String getWorldName() {
@@ -29,6 +35,34 @@ public final class HRace extends JavaPlugin {
         return time >= 2000 && time <= 12000; // 마권 구매 가능 시간: 08:00 - 18:00 (2000 - 12000 틱)
     }
     private boolean raceInProgress = false;
+
+    // 경마 시작을 위한 메서드
+    public void startRace() {
+        if (raceInProgress) {
+            getLogger().warning("경마가 이미 진행 중입니다!");
+            return;
+        }
+        raceInProgress = true;
+        // 여기에 경마를 시작하기 위한 다른 코드 추가
+        raceBarriers.removeAllBarriers();
+        raceBarriers.createAllBarriers();
+
+        getLogger().info("경마가 시작되었습니다!");
+    }
+
+    // 경마 종료를 위한 메서드
+    public void endRace() {
+        if (!raceInProgress) {
+            getLogger().warning("경마가 진행 중이지 않습니다!");
+            return;
+        }
+        raceInProgress = false;
+        // 여기에 경마를 종료하기 위한 다른 코드 추가
+        raceBarriers.removeAllBarriers();
+        getLogger().info("경마가 종료되었습니다!");
+    }
+
+    // 경마 진행 상태 확인 메서드
     public boolean isRaceInProgress() {
         return raceInProgress;
     }
@@ -58,10 +92,13 @@ public final class HRace extends JavaPlugin {
             getServer().getPluginManager().disablePlugin(this);
             return;
         }
+        // Vault successfully initialized. Continue with enabling the plugin...
         getCommand("마권").setExecutor(new HorseTicketCommand(this));
         getCommand("마권구매").setExecutor(new HorseTicketPurchaseCommand(this));
         this.getCommand("마권당첨").setExecutor(new HorseTicketWinCommand(this));
-        // Vault successfully initialized. Continue with enabling the plugin...
+        this.getCommand("경마").setExecutor(new RaceCommandExecutor(this));
+
+
     }
 
 

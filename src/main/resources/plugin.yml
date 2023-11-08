@@ -14,7 +14,9 @@ commands:
     description: 당첨된 말번호의 마권을 산 플레이어에게 상금을 지급합니다.
     usage: /마권당첨 <말번호>
     permission: horserace.win
-
+  경마:
+    description: 경마 관련 명령어 처리
+    usage: /경마 <시작|종료>
 
 
 permissions:
