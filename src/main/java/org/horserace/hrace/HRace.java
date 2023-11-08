@@ -21,9 +21,8 @@ public final class HRace extends JavaPlugin {
         this.raceBarriers = new RaceBarriers(plugin);
     }
     String worldName = "world";
-    // 설정된 월드 이름을 가져오는 메서드입니다.
     public String getWorldName() {
-        return this.worldName;
+        return worldName;
     }
     public boolean canPurchaseTickets() {
         World world = getServer().getWorld(worldName);
@@ -106,4 +105,6 @@ public final class HRace extends JavaPlugin {
     public void onDisable() {
         // Plugin shutdown logic
     }
+
+
 }
