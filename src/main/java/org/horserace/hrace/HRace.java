@@ -14,13 +14,14 @@ import java.util.List;
 import java.util.UUID;
 
 public final class HRace extends JavaPlugin {
+    String worldName = "world";
     public boolean canPurchaseTickets() {
-        World city2 = getServer().getWorld("city2");
-        if (city2 == null) {
-            getLogger().warning("city2 월드를 찾을 수 없습니다!");
+        World world = getServer().getWorld(worldName);
+        if (world == null) {
+            getLogger().warning(" 월드를 찾을 수 없습니다!");
             return false; // city2 월드가 없는 경우 마권 구매 불가
         }
-        long time = city2.getTime(); // city2 월드의 현재 시간을 가져옵니다.
+        long time = world.getTime(); // city2 월드의 현재 시간을 가져옵니다.
         return time >= 2000 && time <= 12000; // 마권 구매 가능 시간: 08:00 - 18:00 (2000 - 12000 틱)
     }
     private boolean raceInProgress = false;

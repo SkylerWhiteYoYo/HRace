@@ -25,9 +25,15 @@ public class HorseTicketPurchaseCommand implements CommandExecutor {
 
         Player player = (Player) sender; // 중복된 선언을 제거했습니다.
 
-        // 경마가 진행 중이거나 마권 구매 시간이 아닌 경우
-        if (plugin.isRaceInProgress() || !plugin.canPurchaseTickets()) {
-            player.sendMessage("현재 마권 구매가 불가능합니다.");
+// 경마가 진행 중인 경우
+        if (plugin.isRaceInProgress()) {
+            player.sendMessage("경마가 이미 진행 중입니다. 다음 경마를 기다려 주세요.");
+            return true;
+        }
+
+// 마권 구매 시간이 아닌 경우
+        if (!plugin.canPurchaseTickets()) {
+            player.sendMessage("현재는 마권 구매 시간이 아닙니다. 마권 구매 가능 시간 : 08:00~ 18:00");
             return true;
         }
 
