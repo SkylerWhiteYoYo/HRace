@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9565c87d-d3e1-4417-885a-30c10453397a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/WinnerLogger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/TimeTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/TimeTracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/WinnerLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/WinnerLogger.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +22,13 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="68b268106aabb21b0170d001744c6eec25f0932d" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="SOFT" />
+    <option name="RESET_MODE" value="HARD" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectColorInfo">{
@@ -175,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699543371615</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="1.0.0 (메모장기능까지 추가 완료) //다음에는 이제 밸런스패치 해야할듯">
+      <option name="closed" value="true" />
+      <created>1699544591866</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1699544591866</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -201,6 +215,7 @@
     <MESSAGE value="거의다 완성함 이제 /경마 시작만 치면 아무것도 할게 없음. 이제 해야할것은 시작 소리넣고 끝소리 넣고 끝날때 폭죽 적절한것 배치" />
     <MESSAGE value="시작 소리 넣었고, 끝 소리 넣었음, 하지만 폭죽이 안터짐 올라가기만함 // 다음에 추가할것 메모장 기능(우승자를 기록함)" />
     <MESSAGE value="폭죽수정 완료/ 다음에 추가할것 메모장 기능(우승자를 기록함)" />
-    <option name="LAST_COMMIT_MESSAGE" value="폭죽수정 완료/ 다음에 추가할것 메모장 기능(우승자를 기록함)" />
+    <MESSAGE value="1.0.0 (메모장기능까지 추가 완료) //다음에는 이제 밸런스패치 해야할듯" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.0.0 (메모장기능까지 추가 완료) //다음에는 이제 밸런스패치 해야할듯" />
   </component>
 </project>

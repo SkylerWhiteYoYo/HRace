@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import org.bukkit.plugin.java.JavaPlugin;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class WinnerLogger {
 
@@ -25,8 +27,13 @@ public class WinnerLogger {
     }
 
     public void logWinner(String winnerName) {
+        // 날짜와 시간 포맷을 생성합니다.
+        String pattern = "yyyy-MM-dd HH:mm:ss";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+        String timestamp = simpleDateFormat.format(new Date());
+
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(logFile, true))) {
-            writer.write(winnerName);
+            writer.write(timestamp + " - " + winnerName);
             writer.newLine(); // 줄바꿈을 추가하여 다음 우승자와 구분
         } catch (IOException e) {
             e.printStackTrace();
