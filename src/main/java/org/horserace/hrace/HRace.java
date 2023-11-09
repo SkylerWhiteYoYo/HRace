@@ -7,6 +7,7 @@ import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.horserace.hrace.Barriers.RaceBarriers;
 import org.horserace.hrace.NPC.HorseNPCManager;
+import org.horserace.hrace.NPC.NPCArrival;
 import org.horserace.hrace.NPC.NPCRemoveManager;
 import org.horserace.hrace.NPC.NPCSpeedManager;
 import org.horserace.hrace.Ticket.HorseTicket;
@@ -22,6 +23,7 @@ import net.citizensnpcs.api.npc.NPCRegistry;
 public final class HRace extends JavaPlugin {
     private NPCRemoveManager npcRemoveManager;
     private HorseNPCManager horseNPCManager;
+    private NPCArrival NPCarrival;
     private NPCSpeedManager npcSpeedManager;
     private NPCRegistry npcRegistry;
     private RaceBarriers raceBarriers;
@@ -64,6 +66,8 @@ public final class HRace extends JavaPlugin {
         horseNPCManager.setHorseDestination("돼지뇨속",2);
         horseNPCManager.setHorseDestination("고냥이",3);
         horseNPCManager.setHorseDestination("그저GOAT",4);
+        NPCarrival.resetWinnerAnnouncement();
+        new RaceTracker(this, NPCarrival).runTaskTimer(this, 0L, 5L);
 
 
         getLogger().info("경마가 시작되었습니다!");
@@ -116,6 +120,7 @@ public final class HRace extends JavaPlugin {
         this.raceBarriers = new RaceBarriers(this);// 이게 있어야 울타리 불러오기 가능
         this.horseNPCManager = new HorseNPCManager(this, CitizensAPI.getNPCRegistry());
         this.npcSpeedManager = new NPCSpeedManager();
+        this.NPCarrival=new NPCArrival(this);
         //this.npcRegistry = CitizensAPI.getNPCRegistry();
         getLogger().info("플러그인 활성화됨 (HRACE)");
 

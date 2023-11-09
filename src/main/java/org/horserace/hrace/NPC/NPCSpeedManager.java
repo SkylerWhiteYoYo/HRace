@@ -4,16 +4,16 @@ import net.citizensnpcs.api.npc.NPC;
 import net.citizensnpcs.api.npc.NPCRegistry;
 public class NPCSpeedManager {
     // 필요한 속도 범위에 대한 변수를 정의합니다.
-    private float minSpeedPiggy = 1.0f;
-    private float maxSpeedPiggy = 1.3f;
+    private float minSpeedPiggy = 0.9f;
+    private float maxSpeedPiggy = 1.2f;
     private float minSpeedCat = 0.55f;
     private float maxSpeedCat = 1.05f;
-    private float minSpeedGoat = 0.55f;
-    private float maxSpeedGoat = 1.75f;
+    private float minSpeedGoat = 0.6f;
+    private float maxSpeedGoat = 1.85f;
     private float minSpeedHorse = 2.5f;
     private float maxSpeedHorse = 3.0f;
-    private float minSpeedPanda = 2.5f;
-    private float maxSpeedPanda = 3.0f;
+    private float minSpeedPanda = 2.0f;
+    private float maxSpeedPanda = 2.5f;
 
     // 각 NPC의 이름에 따라 속도를 설정합니다.
     public void setNPCSpeeds() {
