@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9565c87d-d3e1-4417-885a-30c10453397a" name="Changes" comment="" />
+    <list default="true" id="9565c87d-d3e1-4417-885a-30c10453397a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/WinnerLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699542980401</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="폭죽수정 완료/ 다음에 추가할것 메모장 기능(우승자를 기록함)">
+      <option name="closed" value="true" />
+      <created>1699543371615</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1699543371615</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,6 +200,7 @@
     <MESSAGE value="NPC소환 NPC 출발 만들었음 잘 작동 됨  맞춰져 있는것같은느낌이 있지만 도착 을 감지하는 메소드 만들어야함 ((전커밋 위치문제 해결))" />
     <MESSAGE value="거의다 완성함 이제 /경마 시작만 치면 아무것도 할게 없음. 이제 해야할것은 시작 소리넣고 끝소리 넣고 끝날때 폭죽 적절한것 배치" />
     <MESSAGE value="시작 소리 넣었고, 끝 소리 넣었음, 하지만 폭죽이 안터짐 올라가기만함 // 다음에 추가할것 메모장 기능(우승자를 기록함)" />
-    <option name="LAST_COMMIT_MESSAGE" value="시작 소리 넣었고, 끝 소리 넣었음, 하지만 폭죽이 안터짐 올라가기만함 // 다음에 추가할것 메모장 기능(우승자를 기록함)" />
+    <MESSAGE value="폭죽수정 완료/ 다음에 추가할것 메모장 기능(우승자를 기록함)" />
+    <option name="LAST_COMMIT_MESSAGE" value="폭죽수정 완료/ 다음에 추가할것 메모장 기능(우승자를 기록함)" />
   </component>
 </project>

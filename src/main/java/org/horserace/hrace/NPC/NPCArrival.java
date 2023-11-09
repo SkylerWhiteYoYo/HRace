@@ -6,17 +6,20 @@ import net.citizensnpcs.trait.CurrentLocation;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.horserace.hrace.HRace;
+import org.horserace.hrace.WinnerLogger;
 
 public class NPCArrival {
 
     // 경주 정보를 관리하는 Race 클래스의 참조를 저장합니다.
     private HRace plugin;
+    private WinnerLogger winnerLogger;
     private boolean winnerAnnounced = false;
     private int lastWinnerNumber = 0;
 
     // NPCArrival 클래스의 생성자입니다.
     public NPCArrival(HRace plugin) {
         this.plugin = plugin;
+        this.winnerLogger = new WinnerLogger(plugin);
     }
 
     // NPC의 현재 위치를 검사하여 우승지점에 도착했는지 확인하는 메소드입니다.
@@ -60,6 +63,7 @@ public class NPCArrival {
             // 우승자를 방송하는 메소드입니다.
             winnerMessage = "§e[HRace] §6우승자는 " + lastWinnerNumber + "번, " + npcName + "입니다!";
             Bukkit.getServer().broadcastMessage(winnerMessage);
+            winnerLogger.logWinner(npcName + " - " + lastWinnerNumber);
             // Bukkit의 dispatchCommand를 사용하여 마권당첨 명령어 실행
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "마권당첨 " + lastWinnerNumber);
             winnerAnnounced = true;
