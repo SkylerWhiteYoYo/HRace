@@ -15,7 +15,7 @@ public class RaceCommandExecutor implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (args.length == 0) {
-            sender.sendMessage("사용법: /경마 <start|end>");
+            sender.sendMessage("사용법: /경마 <시작|종료>");
             return true;
         }
 

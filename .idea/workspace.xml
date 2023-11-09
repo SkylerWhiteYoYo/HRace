@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9565c87d-d3e1-4417-885a-30c10453397a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/Barriers/RaceBarriers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/Barriers/RaceBarriers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/NPC/HorseNPCManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/NPC/NPCRemoveManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/NPC/NPCSpeedManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/HRace_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/HRace_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/HRace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/HRace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/RaceCommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/RaceCommandExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/horserace/hrace/HRace.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/horserace/hrace/HRace.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/horserace/hrace/RaceCommandExecutor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/horserace/hrace/RaceCommandExecutor.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +47,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/lee/Desktop/내가만든 플귄/HRace",
+    "last_opened_file_path": "C:/Users/lee/Desktop/마크 서버 v0.1/plugins",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -127,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699435911247</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="오류 전부 해결했고 /경마 시작 /경마 종료도 잘 작동함. 이제 남은건 npc 소환과 npc 출발 그리고 도착 메소드 등등 있으면 끝날듯">
+      <option name="closed" value="true" />
+      <created>1699444797521</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699444797521</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,6 +162,7 @@
     <MESSAGE value="배리어 관련 메소드 전부 작성함 그리고 월드이름을 메인클래스에서 변경가능하게 하였음" />
     <MESSAGE value="/경마 시작 , /경마 종료 커맨드 추가 및 그에따른 메서드 작성" />
     <MESSAGE value="오류로인해 일단 커밋하는중" />
-    <option name="LAST_COMMIT_MESSAGE" value="오류로인해 일단 커밋하는중" />
+    <MESSAGE value="오류 전부 해결했고 /경마 시작 /경마 종료도 잘 작동함. 이제 남은건 npc 소환과 npc 출발 그리고 도착 메소드 등등 있으면 끝날듯" />
+    <option name="LAST_COMMIT_MESSAGE" value="오류 전부 해결했고 /경마 시작 /경마 종료도 잘 작동함. 이제 남은건 npc 소환과 npc 출발 그리고 도착 메소드 등등 있으면 끝날듯" />
   </component>
 </project>

@@ -1,10 +1,14 @@
 package org.horserace.hrace;
 
+import net.citizensnpcs.api.CitizensAPI;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.World;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.horserace.hrace.Barriers.RaceBarriers;
+import org.horserace.hrace.NPC.HorseNPCManager;
+import org.horserace.hrace.NPC.NPCRemoveManager;
+import org.horserace.hrace.NPC.NPCSpeedManager;
 import org.horserace.hrace.Ticket.HorseTicket;
 import org.horserace.hrace.Ticket.HorseTicketCommand;
 import org.horserace.hrace.Ticket.HorseTicketPurchaseCommand;
@@ -12,11 +16,18 @@ import org.horserace.hrace.Ticket.HorseTicketWinCommand;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
+import net.citizensnpcs.api.npc.NPCRegistry;
+
 
 public final class HRace extends JavaPlugin {
+    private NPCRemoveManager npcRemoveManager;
+    private HorseNPCManager horseNPCManager;
+    private NPCSpeedManager npcSpeedManager;
+    private NPCRegistry npcRegistry;
     private RaceBarriers raceBarriers;
-
     String worldName = "world";
+
+
     // 설정된 월드 이름을 가져오는 메서드입니다.
     public String getWorldName() {
         return this.worldName;
@@ -40,8 +51,20 @@ public final class HRace extends JavaPlugin {
         }
         raceInProgress = true;
         // 여기에 경마를 시작하기 위한 다른 코드 추가
-        raceBarriers.removeAllBarriers();
+        npcRemoveManager.removeNPCsByName("우마무스메");
+        npcRemoveManager.removeNPCsByName("쿵푸마니아");
+        npcRemoveManager.removeNPCsByName("돼지뇨속");
+        npcRemoveManager.removeNPCsByName("고냥이");
+        npcRemoveManager.removeNPCsByName("그저GOAT");
         raceBarriers.createAllBarriers();
+        horseNPCManager.spawnRaceHorses();
+        npcSpeedManager.setNPCSpeeds();
+        horseNPCManager.setHorseDestination("우마무스메",0);
+        horseNPCManager.setHorseDestination("쿵푸마니아",1);
+        horseNPCManager.setHorseDestination("돼지뇨속",2);
+        horseNPCManager.setHorseDestination("고냥이",3);
+        horseNPCManager.setHorseDestination("그저GOAT",4);
+
 
         getLogger().info("경마가 시작되었습니다!");
     }
@@ -54,6 +77,11 @@ public final class HRace extends JavaPlugin {
         }
         raceInProgress = false;
         // 여기에 경마를 종료하기 위한 다른 코드 추가
+        npcRemoveManager.removeNPCsByName("우마무스메");
+        npcRemoveManager.removeNPCsByName("쿵푸마니아");
+        npcRemoveManager.removeNPCsByName("돼지뇨속");
+        npcRemoveManager.removeNPCsByName("고냥이");
+        npcRemoveManager.removeNPCsByName("그저GOAT");
         raceBarriers.removeAllBarriers();
         getLogger().info("경마가 종료되었습니다!");
     }
@@ -83,7 +111,12 @@ public final class HRace extends JavaPlugin {
     }
     @Override
     public void onEnable() {
+        this.npcRemoveManager = new NPCRemoveManager(); // NPCRemoveManager 초기화
+        //this.horseNPCManager = new HorseNPCManager(this, npcRegistry);
         this.raceBarriers = new RaceBarriers(this);// 이게 있어야 울타리 불러오기 가능
+        this.horseNPCManager = new HorseNPCManager(this, CitizensAPI.getNPCRegistry());
+        this.npcSpeedManager = new NPCSpeedManager();
+        //this.npcRegistry = CitizensAPI.getNPCRegistry();
         getLogger().info("플러그인 활성화됨 (HRACE)");
 
         if (!initializeVault()) {
