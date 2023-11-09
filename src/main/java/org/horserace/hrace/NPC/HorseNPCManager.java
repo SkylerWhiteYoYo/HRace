@@ -67,7 +67,7 @@ public class HorseNPCManager {
         plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
             @Override
             public void run() {
-                finalNpc.getNavigator().setTarget(new Location(world, 177 + (index * 5), 64, -142));
+                finalNpc.getNavigator().setTarget(new Location(world, 167 + (index * 5), 64, -142));
             }
         }, 20L); // 20 ticks = 1 second
     }

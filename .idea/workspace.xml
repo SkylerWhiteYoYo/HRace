@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9565c87d-d3e1-4417-885a-30c10453397a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/NPC/HorseNPCManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/NPC/NPCRemoveManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/NPC/NPCSpeedManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/HRace_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/HRace_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/HRace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/HRace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/RaceCommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/RaceCommandExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/horserace/hrace/HRace.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/horserace/hrace/HRace.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/horserace/hrace/RaceCommandExecutor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/horserace/hrace/RaceCommandExecutor.class" afterDir="false" />
-    </list>
+    <list default="true" id="9565c87d-d3e1-4417-885a-30c10453397a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699444797521</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="NPC소환 NPC 출발 만들었음 잘 작동 됨 navigation 설정까지 잘됐음근데 위치가 다똑같은곳으로 맞춰져 있는것같은느낌이 있지만 도착 을 감지하는 메소드 만들어야함">
+      <option name="closed" value="true" />
+      <created>1699526506187</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699526506187</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -163,6 +161,7 @@
     <MESSAGE value="/경마 시작 , /경마 종료 커맨드 추가 및 그에따른 메서드 작성" />
     <MESSAGE value="오류로인해 일단 커밋하는중" />
     <MESSAGE value="오류 전부 해결했고 /경마 시작 /경마 종료도 잘 작동함. 이제 남은건 npc 소환과 npc 출발 그리고 도착 메소드 등등 있으면 끝날듯" />
-    <option name="LAST_COMMIT_MESSAGE" value="오류 전부 해결했고 /경마 시작 /경마 종료도 잘 작동함. 이제 남은건 npc 소환과 npc 출발 그리고 도착 메소드 등등 있으면 끝날듯" />
+    <MESSAGE value="NPC소환 NPC 출발 만들었음 잘 작동 됨 navigation 설정까지 잘됐음근데 위치가 다똑같은곳으로 맞춰져 있는것같은느낌이 있지만 도착 을 감지하는 메소드 만들어야함" />
+    <option name="LAST_COMMIT_MESSAGE" value="NPC소환 NPC 출발 만들었음 잘 작동 됨 navigation 설정까지 잘됐음근데 위치가 다똑같은곳으로 맞춰져 있는것같은느낌이 있지만 도착 을 감지하는 메소드 만들어야함" />
   </component>
 </project>
