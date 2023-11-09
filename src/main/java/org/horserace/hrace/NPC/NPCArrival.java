@@ -58,7 +58,7 @@ public class NPCArrival {
 
 
             // 우승자를 방송하는 메소드입니다.
-            winnerMessage = "우승자는 " + lastWinnerNumber + "번, " + npcName + "입니다!";
+            winnerMessage = "§e[HRace] §6우승자는 " + lastWinnerNumber + "번, " + npcName + "입니다!";
             Bukkit.getServer().broadcastMessage(winnerMessage);
             // Bukkit의 dispatchCommand를 사용하여 마권당첨 명령어 실행
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "마권당첨 " + lastWinnerNumber);

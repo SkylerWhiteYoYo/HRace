@@ -22,11 +22,11 @@ public class HorseTicketWinCommand implements CommandExecutor {
         this.plugin = plugin;
         // 여기에서 배당률을 초기화합니다.
         oddsMap = new HashMap<>();
-        oddsMap.put(1, 2.0); // 1번 말의 배당률
-        oddsMap.put(2, 2.0); // 2번 말의 배당률
-        oddsMap.put(3, 2.0); // 3번 말의 배당률
-        oddsMap.put(4, 2.0);
-        oddsMap.put(5, 2.0);
+        oddsMap.put(1, 2.0); // 우마무스메
+        oddsMap.put(2, 2.0); // 팬더
+        oddsMap.put(3, 2.0); // 돼지
+        oddsMap.put(4, 2.0); // 고냥이
+        oddsMap.put(5, 2.0); // 염소
         // 여기에 다른 말들의 배당률을 계속 추가할 수 있습니다.
     }
     @Override
@@ -64,9 +64,9 @@ public class HorseTicketWinCommand implements CommandExecutor {
                         double payout = ticket.getAmount() * odds;
                         EconomyResponse r = plugin.getEconomy().depositPlayer(Bukkit.getOfflinePlayer(entry.getKey()), payout);
                         if (r.transactionSuccess()) {
-                            winner.sendMessage(String.format("축하합니다! 당신은 %s을(를) 당첨되었습니다!", plugin.getEconomy().format(payout)));
+                            winner.sendMessage(String.format("§e[HRace] §6축하합니다! 당신은 %s을(를) 당첨되었습니다!", plugin.getEconomy().format(payout)));
                         } else {
-                            sender.sendMessage("상금을 지급하는 데 문제가 발생했습니다: " + r.errorMessage);
+                            sender.sendMessage("§e[HRace] §6상금을 지급하는 데 문제가 발생했습니다: " + r.errorMessage);
                         }
                     }
                 }
@@ -74,7 +74,7 @@ public class HorseTicketWinCommand implements CommandExecutor {
         }
 
         plugin.getTickets().clear();
-        sender.sendMessage("모든 당첨 처리가 완료되었습니다.");
+        sender.sendMessage("§e[HRace] §6모든 당첨 처리가 완료되었습니다.");
 
         return true;
     }

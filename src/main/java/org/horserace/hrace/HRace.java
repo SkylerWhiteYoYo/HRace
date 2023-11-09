@@ -2,6 +2,9 @@ package org.horserace.hrace;
 
 import net.citizensnpcs.api.CitizensAPI;
 import net.milkbowl.vault.economy.Economy;
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
+import org.bukkit.Sound;
 import org.bukkit.World;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -28,6 +31,8 @@ public final class HRace extends JavaPlugin {
     private NPCRegistry npcRegistry;
     private RaceBarriers raceBarriers;
     String worldName = "world";
+    World world = Bukkit.getWorld(worldName);
+
 
 
     // 설정된 월드 이름을 가져오는 메서드입니다.
@@ -66,6 +71,11 @@ public final class HRace extends JavaPlugin {
         horseNPCManager.setHorseDestination("돼지뇨속",2);
         horseNPCManager.setHorseDestination("고냥이",3);
         horseNPCManager.setHorseDestination("그저GOAT",4);
+        world.playSound(new Location(world, 177, 68, -187), Sound.ITEM_GOAT_HORN_SOUND_0, 4.0f, 1.0f);
+
+        // 경마 시작 메시지
+        Bukkit.broadcastMessage("§e[HRace] §6경마가 시작되었습니다!");
+
         NPCarrival.resetWinnerAnnouncement();
         new RaceTracker(this, NPCarrival).runTaskTimer(this, 0L, 5L);
 
@@ -81,12 +91,15 @@ public final class HRace extends JavaPlugin {
         }
         raceInProgress = false;
         // 여기에 경마를 종료하기 위한 다른 코드 추가
+        Location location = new Location(world, 179, 65, -141); // 폭죽을 터뜨릴 위치
+        new FireworkLauncher(this, world, location).runTask(this);
         npcRemoveManager.removeNPCsByName("우마무스메");
         npcRemoveManager.removeNPCsByName("쿵푸마니아");
         npcRemoveManager.removeNPCsByName("돼지뇨속");
         npcRemoveManager.removeNPCsByName("고냥이");
         npcRemoveManager.removeNPCsByName("그저GOAT");
         raceBarriers.removeAllBarriers();
+        world.playSound(new Location(world, 177, 68, -187), Sound.ITEM_GOAT_HORN_SOUND_1, 4.0f, 1.0f);
         getLogger().info("경마가 종료되었습니다!");
     }
 
@@ -121,6 +134,7 @@ public final class HRace extends JavaPlugin {
         this.horseNPCManager = new HorseNPCManager(this, CitizensAPI.getNPCRegistry());
         this.npcSpeedManager = new NPCSpeedManager();
         this.NPCarrival=new NPCArrival(this);
+        new TimeTracker(this).runTaskTimer(this, 0, 1L);
         //this.npcRegistry = CitizensAPI.getNPCRegistry();
         getLogger().info("플러그인 활성화됨 (HRACE)");
 
