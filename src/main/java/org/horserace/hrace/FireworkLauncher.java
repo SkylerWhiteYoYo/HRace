@@ -33,7 +33,7 @@ public class FireworkLauncher extends BukkitRunnable {
                 .build();
 
         fireworkMeta.addEffect(effect);
-        fireworkMeta.setPower(8); // 폭죽이 올라가는 높이를 설정합니다.
+        fireworkMeta.setPower(2); // 폭죽이 올라가는 높이를 설정합니다.
         firework.setFireworkMeta(fireworkMeta);
     }
 
