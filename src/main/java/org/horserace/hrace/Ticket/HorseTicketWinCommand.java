@@ -22,11 +22,11 @@ public class HorseTicketWinCommand implements CommandExecutor {
         this.plugin = plugin;
         // 여기에서 배당률을 초기화합니다.
         oddsMap = new HashMap<>();
-        oddsMap.put(1, 2.0); // 우마무스메
-        oddsMap.put(2, 2.0); // 팬더
-        oddsMap.put(3, 2.0); // 돼지
-        oddsMap.put(4, 2.0); // 고냥이
-        oddsMap.put(5, 2.0); // 염소
+        oddsMap.put(1, 13.0); // 우마무스메
+        oddsMap.put(2, 7.0); // 팬더
+        oddsMap.put(3, 4.0); // 돼지
+        oddsMap.put(4, 6.0); // 고냥이
+        oddsMap.put(5, 3.0); // 염소
         // 여기에 다른 말들의 배당률을 계속 추가할 수 있습니다.
     }
     @Override

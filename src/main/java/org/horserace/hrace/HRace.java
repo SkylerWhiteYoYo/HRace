@@ -71,7 +71,7 @@ public final class HRace extends JavaPlugin {
         horseNPCManager.setHorseDestination("돼지뇨속",2);
         horseNPCManager.setHorseDestination("고냥이",3);
         horseNPCManager.setHorseDestination("그저GOAT",4);
-        world.playSound(new Location(world, 177, 68, -187), Sound.ITEM_GOAT_HORN_SOUND_0, 4.0f, 1.0f);
+        world.playSound(new Location(world, 177, 68, -187), Sound.ITEM_GOAT_HORN_SOUND_0, 3.0f, 1.0f);
 
         // 경마 시작 메시지
         Bukkit.broadcastMessage("§e[HRace] §6경마가 시작되었습니다!");
@@ -99,7 +99,7 @@ public final class HRace extends JavaPlugin {
         npcRemoveManager.removeNPCsByName("고냥이");
         npcRemoveManager.removeNPCsByName("그저GOAT");
         raceBarriers.removeAllBarriers();
-        world.playSound(new Location(world, 177, 68, -187), Sound.ITEM_GOAT_HORN_SOUND_1, 4.0f, 1.0f);
+        world.playSound(new Location(world, 177, 68, -187), Sound.ITEM_GOAT_HORN_SOUND_1, 3.0f, 1.0f);
         getLogger().info("경마가 종료되었습니다!");
     }
 
