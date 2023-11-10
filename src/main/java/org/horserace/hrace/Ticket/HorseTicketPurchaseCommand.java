@@ -6,15 +6,18 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.horserace.hrace.HRace;
+import org.horserace.hrace.RegionBroadcaster;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HorseTicketPurchaseCommand implements CommandExecutor {
     private final HRace plugin;
+    private RegionBroadcaster regionBroadcaster;
 
     public HorseTicketPurchaseCommand(HRace plugin) {
         this.plugin = plugin;
+        this.regionBroadcaster = new RegionBroadcaster(plugin);
     }
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -75,6 +78,8 @@ public class HorseTicketPurchaseCommand implements CommandExecutor {
         plugin.getTickets().put(player.getUniqueId(), tickets);
 
         player.sendMessage(String.format("마권을 구매했습니다. 말 번호: %d, 금액: %.2f", horseNumber, amount));
+        String message = String.format("§e[HRace] §f%s님이 마권을 구매했습니다. 말 번호: %d, 금액: %.2f", player.getDisplayName(), horseNumber, amount);
+        regionBroadcaster.broadcastToRegion(message);
         return true;
 
 

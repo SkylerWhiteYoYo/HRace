@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9565c87d-d3e1-4417-885a-30c10453397a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/RegionBroadcaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/HRace_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/HRace_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/HRace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/HRace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/NPC/NPCArrival.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/NPC/NPCArrival.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/Ticket/HorseTicketPurchaseCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/Ticket/HorseTicketPurchaseCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/Ticket/HorseTicketWinCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/Ticket/HorseTicketWinCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/TimeTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/horserace/hrace/TimeTracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/horserace/hrace/HRace.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/horserace/hrace/HRace.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/horserace/hrace/Ticket/HorseTicketWinCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/horserace/hrace/Ticket/HorseTicketWinCommand.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +56,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lee/Desktop/마크 서버 v0.1/plugins&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lee/Desktop/내가만든 플귄/HRace&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -197,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699546116411</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="1.1.0 배당 설정및 08:00~1800만 경마 시작하게 하고 뿔소리 너무 커서 줄였음">
+      <option name="closed" value="true" />
+      <created>1699580372713</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1699580372713</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,6 +243,7 @@
     <MESSAGE value="폭죽수정 완료/ 다음에 추가할것 메모장 기능(우승자를 기록함)" />
     <MESSAGE value="1.0.0 (메모장기능까지 추가 완료) //다음에는 이제 밸런스패치 해야할듯" />
     <MESSAGE value="1.0.1 메모장 기능 추가 완료 및 (시간까지 나오게 수정) 그리고 매시간 경마 시작되도록 변경(밸런스 패치때문에)" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.0.1 메모장 기능 추가 완료 및 (시간까지 나오게 수정) 그리고 매시간 경마 시작되도록 변경(밸런스 패치때문에)" />
+    <MESSAGE value="1.1.0 배당 설정및 08:00~1800만 경마 시작하게 하고 뿔소리 너무 커서 줄였음&#10;//만들것 경마장 월드가드 내에서만 메시지 들리게 하고싶음" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.1.0 배당 설정및 08:00~1800만 경마 시작하게 하고 뿔소리 너무 커서 줄였음&#10;//만들것 경마장 월드가드 내에서만 메시지 들리게 하고싶음" />
   </component>
 </project>

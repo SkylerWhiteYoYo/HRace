@@ -7,6 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.horserace.hrace.HRace;
+import org.horserace.hrace.RegionBroadcaster;
 
 import java.util.HashMap;
 import java.util.List;
@@ -14,12 +15,13 @@ import java.util.Map;
 import java.util.UUID;
 
 public class HorseTicketWinCommand implements CommandExecutor {
-
+    private RegionBroadcaster regionBroadcaster;
     private final HRace plugin;
     private final HashMap<Integer, Double> oddsMap;
 
     public HorseTicketWinCommand(HRace plugin) {
         this.plugin = plugin;
+        this.regionBroadcaster = new RegionBroadcaster(plugin);
         // 여기에서 배당률을 초기화합니다.
         oddsMap = new HashMap<>();
         oddsMap.put(1, 13.0); // 우마무스메
@@ -64,7 +66,9 @@ public class HorseTicketWinCommand implements CommandExecutor {
                         double payout = ticket.getAmount() * odds;
                         EconomyResponse r = plugin.getEconomy().depositPlayer(Bukkit.getOfflinePlayer(entry.getKey()), payout);
                         if (r.transactionSuccess()) {
-                            winner.sendMessage(String.format("§e[HRace] §6축하합니다! 당신은 %s을(를) 당첨되었습니다!", plugin.getEconomy().format(payout)));
+                            winner.sendMessage(String.format("§e[HRace] §6축하합니다! 당신은 %s원에 당첨되었습니다!", plugin.getEconomy().format(payout)));
+                            String broadcastMessage = String.format("§e[HRace] §f%s님이  %s원을 획득하였습니다!", winner.getDisplayName(), plugin.getEconomy().format(payout));
+                            regionBroadcaster.broadcastToRegion(broadcastMessage);
                         } else {
                             sender.sendMessage("§e[HRace] §6상금을 지급하는 데 문제가 발생했습니다: " + r.errorMessage);
                         }

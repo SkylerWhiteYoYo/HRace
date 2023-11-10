@@ -30,10 +30,10 @@ public final class HRace extends JavaPlugin {
     private NPCSpeedManager npcSpeedManager;
     private NPCRegistry npcRegistry;
     private RaceBarriers raceBarriers;
-    String worldName = "world";
+    String worldName = "city2";
     World world = Bukkit.getWorld(worldName);
 
-
+    RegionBroadcaster regionBroadcaster = new RegionBroadcaster(this);
 
     // 설정된 월드 이름을 가져오는 메서드입니다.
     public String getWorldName() {
@@ -74,7 +74,7 @@ public final class HRace extends JavaPlugin {
         world.playSound(new Location(world, 177, 68, -187), Sound.ITEM_GOAT_HORN_SOUND_0, 3.0f, 1.0f);
 
         // 경마 시작 메시지
-        Bukkit.broadcastMessage("§e[HRace] §6경마가 시작되었습니다!");
+        regionBroadcaster.broadcastToRegion("§e[HRace] §6경마가 시작되었습니다!");
 
         NPCarrival.resetWinnerAnnouncement();
         new RaceTracker(this, NPCarrival).runTaskTimer(this, 0L, 5L);
@@ -148,7 +148,13 @@ public final class HRace extends JavaPlugin {
         getCommand("마권구매").setExecutor(new HorseTicketPurchaseCommand(this));
         this.getCommand("마권당첨").setExecutor(new HorseTicketWinCommand(this));
         this.getCommand("경마").setExecutor(new RaceCommandExecutor(this));
-
+        // worldName에 해당하는 world 객체를 안전하게 초기화합니다.
+        world = Bukkit.getWorld(worldName);
+        if (world == null) {
+            getLogger().severe("월드 '" + worldName + "'을(를) 찾을 수 없습니다. 플러그인을 비활성화합니다.");
+            getServer().getPluginManager().disablePlugin(this);
+            return;
+        }
 
     }
 
